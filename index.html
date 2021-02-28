@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>LogMais</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- fevicon -->
+   <link href="css/toastr.css" rel="stylesheet">
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+      media="screen">
+   <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <style>
+   
+   #ulCards   {
+      margin-top:-1%;
+      text-align: center;
+      margin-left: -2.5%
+   }
+
+   .cardsProjetos {
+      margin-left: 1%;
+      margin-top: 2%;
+   }
+         .card{
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    cursor: pointer;
+    display:flex;
+    justify-content: space-between;
+     
+}
+
+.card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.projects{
+   margin-top: 2%;
+   background-color: #fef8f5;
+   margin-left: 5%; 
+   padding-top:20px;
+   margin-right: 1%; 
+    width: 90%;
+      
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800%7CRaleway:100,200,300,400,600,700,800,900%7CMontserrat:100,200,300,400,500,600,700,800,900');
+
+
+
+</style>
+</head>
+<!-- body -->
+
+<body class="main-layout">
+   <!-- loader  -->
+   <div class="loader_bg">
+      <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+   </div>
+   <!-- end loader -->
+   <!-- header -->
+   <header class="full_bg">
+      <!-- header inner -->
+      <div class="header">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="header_bottom">
+                     <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                           <div class="full">
+                              <div class="center-desk">
+                                 <div class="logo">
+                                    <a href="index.html">Log<b style="color: cornflowerblue;">MAIS</b> </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                           <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                             
+                                 <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item ">
+                                       <a class="nav-link active" href="index.html">HOME</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                       <a class="nav-link" href="pages/caixaexpresso.html">CAIXA EXPRESSO</a>
+                                    </li>
+                                    <li class="nav-item">
+                                       <a class="nav-link " href="pages/weblogin.html">WEBLOGIN</a>
+                                    </li>
+                                    <li class="nav-item">
+                                       <a class="nav-link " href="pages/npeg.html">NPEG</a>
+                                    </li>
+                                    <li class="nav-item">
+                                       <a class="nav-link" href="pages/sincronismo.html">SINCRONISMO</a>
+                                    </li>
+                                    <li class="dropdown">
+                                       <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" 
+                                       aria-haspopup="true" aria-expanded="false">OUTROS</a>
+                                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                          <a class="dropdown-item" href="pages/tarefas.html">Tarefas</a>
+                                          <a class="dropdown-item" href="pages/linksuteis.html">Links Úteis</a>
+                                          <a class="dropdown-item" href="pages/unidades.html">Unidades Login</a>
+                                        </div>
+                                    </li>
+
+                                 </ul>   
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- banner -->
+   </header>
+  
+   <section class="banner_main" style="margin-top: 50px;">
+      
+      
+      <div id="myCarousel" class="carousel slide banner" data-ride="carousel">
+         <div class="carousel-inner">
+            
+               <div class="container">
+                
+                     <div class="row">
+                        <div class="col-md-9">
+                           <div class="build_box">
+                              <!-- about -->
+                              <div class="about">
+                                 <div class="container-fluid">
+                                    <div class="row d_flex">
+                                       <div class="col-md-7">
+
+                                          <div class="titlepage" style="margin-top: 20px;">
+                                             <h2>Sobre a Aplicação: </h2>
+                                             <span>O intuito desta aplicação é registrar os erros mais frequentes no
+                                                CaixaExpresso, WebLogin, NPEG, ou qualquer outra rotina muito
+                                                utilizada, juntamente com as <b>possíveis</b> soluções desses erros.<br><br>
+                                                Além de consultar os registros mais frequentes, é possível
+                                                também cadastrar novos registros a medida que o
+                                                usuário desta aplicação achar conviniente
+                                             </span>
+
+                                          </div>
+                                       </div>
+                                       <div class="col-md-5">
+                                          <div class="about_img">
+                                             <figure><img src="images/code.PNG" alt="#" /></figure>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- end about -->
+                             
+                           </div>
+                        </div>
+                     </div>
+                  
+                  </div>
+
+                  <div class="projects"  >
+                     <div class="container-fluid" >
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="titlepage">
+                                 <h2>Os Projetos</h2>
+                                 <span>Resumo sobre os principais projetos utilizados</span>
+                              </div>  
+                              <div id="cardsProjetos" >
+                                 <ul id="ulCards">
+                                    <li class="cardsProjetos" >
+                                       <div class="card" style="width: 288px;">
+                                          <img class="card-img-top" src="images/caixaexpresso.png" alt="Card image cap" style="height: 18em;">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Caixa Expresso</h5>
+                                            <p class="card-text">Utilizado nas lojas para agilizar o processo de venda, com comandos simples e específicos
+                                                para facilitar o uso.
+                                            </p>
+                                          </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="cardsProjetos" >
+                                       <div class="card" style="width: 288px;">
+                                          <img class="card-img-top" src="images/weblogin.jpg" alt="Card image cap" style="height: 18em;">
+                                          <div class="card-body">
+                                            <h5 class="card-title">WebLogin</h5>
+                                            <p class="card-text" >Principal sistema da empresa, integra dados das áreas de Vendas, 
+                                             Finanças, Estoque, Compras e etc</p>
+                                          </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="cardsProjetos" >
+                                       <div class="card" style="width: 288px;">
+                                          <img class="card-img-top" src="images/sincronismo.jpg" alt="Card image cap" style="height: 18em;">
+                                          <div class="card-body">
+                                            <h5 class="card-title">WebSincronismo</h5>
+                                            <p class="card-text">Aplicação responsável por monitorar o sincronismo entre o banco de dados das unidades
+                                               locais com o banco  da matriz
+                                            </p>
+                                          </div>
+                                        </div>
+                                    </li>
+                                    <li class="cardsProjetos" >
+                                       <div class="card" style="width: 288px;">
+                                          <img class="card-img-top" src="images/npeg.PNG" alt="Card image cap" style="height: 18em;">
+                                          <div class="card-body">
+                                            <h5 class="card-title">NPEG</h5>
+                                            <p class="card-text">Software responsável por gerencialmento de notas Fiscais, inclusive emissão. 
+                                               Não é desenvolvido pela Login
+                                            </p>
+                                          </div>
+                                        </div>
+                                    </li>
+
+                                   <!-- <li class="cardsProjetos" >
+                                       <div class="card" style="width: 288px;">
+                                          <img class="card-img-top" src="images/jproject.PNG" alt="Card image cap" style="height: 18em;">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Jproject</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                          </div>
+                                        </div>
+                                    </li>-->
+                                 </ul>
+                              </div>
+                             
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-md-12">
+                              
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end projects -->
+                   
+   </section>
+   <!-- end banner -->
+   <!-- three_box -->
+   <!-- <div class="three_box">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-3">
+               <div id="text_hover" class="const text_align_center">
+                  <i><img src="images/ser1.png" alt="#" /></i>
+                  <span>construction services</span>
+               </div>
+            </div>
+            <div class="col-md-3">
+               <div id="text_hover" class="const text_align_center">
+                  <i><img src="images/ser2.png" alt="#" /></i>
+                  <span>RECONSTRUCTION</span>
+               </div>
+            </div>
+            <div class="col-md-3">
+               <div id="text_hover" class="const text_align_center">
+                  <i><img src="images/ser3.png" alt="#" /></i>
+                  <span>ELECTRICAL services</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div> -->
+   <!-- end three_box -->
+
+   
+   <!-- end clients -->
+   <!--  footer -->
+   <footer >
+      <div class="footer-copyright">
+         <div class="container">
+         <div class="row">
+         <div class="col-md-12 text-center">
+         <p>LOGMAIS Gerenciamento de Registros dos sistemas Login © 2020. All rights reserved.</p>
+         </div>
+         </div>
+         </div>
+         </div>
+   </footer>
+   <!-- end footer -->
+   <!-- Javascript files-->
+   <script src="js/jquery.min.js"></script>
+ 
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/jquery-3.0.0.min.js"></script>
+   <!-- sidebar -->
+   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="js/custom.js"></script>
+   <script src="js/toastr.js"></script>
+
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+
+<script src="js/principal.js"></script>
+
+</body>
+
+</html>

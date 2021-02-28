@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <!-- mobile metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
+  <!-- site metas -->
+  <title>LogMais - Caixa Expresso</title>
+  <meta name="keywords" content=""/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+  <!-- style css -->
+  <link rel="stylesheet" href="../css/style.css"/>
+  <!-- Responsive-->
+  <link rel="stylesheet" href="../css/responsive.css"/>
+  <!-- fevicon -->
+  <link rel="icon" href="../images/fevicon.png" type="image/gif" />
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css"/>
+  <!-- Tweaks for older IEs-->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+    media="screen"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+
+<body class="main-layout inner_page" onload="listarCadastros()">
+  <!-- loader  -->
+  <div class="loader_bg">
+    <div class="loader"><img src="../images/loading.gif" alt="#" /></div>
+  </div>
+  <!-- end loader -->
+  <!-- header -->
+  <header class="full_bg">
+    <!-- header inner -->
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header_bottom">
+              <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                  <div class="full">
+                    <div class="center-desk">
+                      <div class="logo">
+                        <a href="index.html">Log<b style="color: cornflowerblue;">MAIS</b> </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                  <nav class="navigation navbar navbar-expand-md navbar-dark ">
+
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item ">
+                        <a class="nav-link " href="../index.html">HOME</a>
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link active" href="caixaexpresso.html">CAIXA EXPRESSO</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="weblogin.html">WEBLOGIN</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="npeg.html">NPEG</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="sincronismo.html">SINCRONISMO</a>
+                      </li>
+                      <li class="dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false">OUTROS</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="tarefas.html">Tarefas</a>
+                          <a class="dropdown-item" href="linksuteis.html">Links Úteis</a>
+                          <a class="dropdown-item" href="unidades.html">Unidades Login</a>
+                        </div>
+                      </li>
+
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end header inner -->
+    <!-- end header -->
+    <!-- banner -->
+  </header>
+   
+   <div class="row">
+      <div class="col-4" style="width: 250px;">
+        <div class="list-group" id="list-tab" role="tablist"  
+        >
+         
+          <a class="list-group-item list-group-item-action active" id="list-home-list"
+           data-toggle="list" href="#list-home" role="tab" aria-controls="home" 
+           style="width: 200px; margin-bottom: 5px;">Registros</a>
+
+          <a class="list-group-item list-group-item-action" id="list-profile-list"
+           data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"
+            style="width: 200px">Cadastrar</a>
+        </div>
+      </div>
+
+      <div class="col-8" >
+        <div class="tab-content" id="nav-tabContent" >
+
+         <!--LISTA REGISTROS JA EXISTENTES-->
+        
+          <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list" >
+            
+            <div id="container">
+               <div class="row">
+                  
+                  <div id="boxListar" >
+                     <div id="divTopboxListar">Registros <b style="border-radius: 25px; background-color:lightskyblue;color: white; padding: 7px;">CaixaExpresso</b> </div>
+                     <div>
+                      <input type="text" id="myInput" onkeyup="pesquisar()" placeholder="Pesquisar...">
+                      <svg width="3%" height="3%" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                      </svg>
+                     </div>
+                    
+                     
+                    <!-- <form id="formListar">
+                        <div class="form-group">
+                         <label for="exampleFormControlInput1"> <b>Título:</b></label><br>
+                         <p id="spanTitulo" style="background-color:#e0e0e0; padding: 5px; border: solid thin; text-align: justify">${taskValue.titulo}</p>
+                       </div>
+        
+                       <div class="form-group">
+                         <label for="exampleFormControlTextarea1"><b>Problema:</b>  </label><br>
+                         <p style="background-color:#cf9b9b;; padding: 5px; border: solid thin; text-align: justify">${taskValue.problema}</p>
+                       </div>
+        
+                       <div class="form-group">
+                         <label for="exampleFormControlSelect1"><b>Possível Solução:</b>  </label><br>
+                         <p style="background-color:#b2e0b6; padding: 5px; border: solid thin; text-align: justify">${taskValue.solucao}</p>
+                       </div>
+        
+                       <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal"
+                       data-toggle="modal" data-target="#exampleModal" 
+                       onclick="editarRegistro(${taskValue.id},
+                        '${taskValue.titulo}','${taskValue.problema}','${taskValue.solucao}' )"> Editar </button>
+        
+                      <button type="submit" class="btn btn-danger" onclick="deleteTask(${taskValue.id})"> Excluir </button>
+                    </form> -->
+
+                  </div>
+               </div>
+            </div>
+          </div>
+
+         <!--CADASTRA NOVOS REGISTROS-->
+          <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+            <div id="divTopCadastro">Cadastro Registros <b>CaixaExpresso</b> </div>
+            <form id="boxCadastro" style="margin-bottom: 40px;">
+            
+               <div class="form-group">
+                 <label for="exampleFormControlInput1"> <b>Título:</b>  </label>
+                 <input type="text" class="form-control" id="tituloDescr" onclick="esconderAviso()"/>
+                 <div class="invalid-titulo" style="display: none; color: red;">
+                  Por favor, preencha o campo "Título"
+                </div>
+               </div>
+
+               <div class="form-group">
+                 <label for="exampleFormControlTextarea1"><b>Problema:</b>  </label>
+                 <textarea class="form-control" id="problemaDescr" rows="4" onclick="esconderAviso()"></textarea>
+                 <div class="invalid-problema" style="display: none; color: red;">
+                  Por favor, preencha o campo "Problema"
+                </div>
+                 <small  class="form-text text-muted">Favor não colocar aspas simples.</small>
+               </div>
+
+               <div class="form-group">
+                  <label for="exampleFormControlSelect1"><b>Possível Solução:</b>  </label>
+                  <textarea class="form-control" id="solucaoDescr" rows="4" onclick="esconderAviso()" ></textarea>
+                  <div class="invalid-solucao" style="display: none; color: red;">
+                     Por favor, preencha o campo "Possível Solução"
+                   </div>
+                  <small  class="form-text text-muted">Favor não colocar aspas simples.</small>
+                </div>
+
+               <button type="submit" id="btnEnviarFormulario"
+               class="btn btn-primary"><i 
+               class="fa fa-paper-plane " aria-hidden="true"></i> Enviar</button>
+
+               <button  onclick="apagarForm()"
+                class="btn btn-outline-danger" id="btnCancelarCadastro" > <i 
+                class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+               </form>
+
+          </div>
+
+         <!--TELA PARA EDITAR REGISTROS EXISTENTES-->
+          <div id="formEdicao">
+
+           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               <div class="modal-dialog modal-lg">
+                 <div class="modal-content">
+                   <div class="modal-header">
+                     <h2 class="modal-title" id="exampleModalLabel">Edição de Registro</h2>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                     </button>
+                   </div>
+                   <div class="modal-body">
+
+                     <form id="formModalEdicao">
+                       <div class="form-group">
+                         <label for="recipient-name" class="col-form-label"><b>Titulo:</b> </label>
+                         <input style="background-color:#e0e0e0" type="text" class="form-control" id="tituloDescrModal"/>
+                       </div>
+                       <div class="form-group">
+                         <label for="message-text" class="col-form-label"><b>Problema:</b> </label>
+                         <textarea class="form-control" style="background-color:#cf9b9b" id="problemaDescrModal" rows="4"></textarea>
+                       </div>
+
+                       <div class="form-group">
+                        <label for="message-text" class="col-form-label"><b>Possivel Solução:</b> </label>
+                        <textarea class="form-control" style="background-color:#b2e0b6" id="solucaoDescrModal" rows="4"></textarea>
+                      </div>
+                      
+                      <div class="modal-footer">
+                        <button type="submit" class="btn btn-warning" 
+                        data-dismiss="modal" id="botaoEditarModal"><i 
+                        class="fa fa-pencil" aria-hidden="true"></i> Editar</button>
+
+                        <button 
+                        type="button" class="btn btn-secondary" data-dismiss="modal"><i 
+                        class="fa fa-times" aria-hidden="true"></i> Fechar</button>
+                        
+                      </div>
+                     </form>
+                   </div>
+                 </div>
+               </div>
+             </div> 
+
+          </div>
+        </div>
+      </div>
+      <a href="#top" class="glyphicon glyphicon-chevron-up"></a>
+      </div>
+    </div>
+
+   
+    <script src="../js/jquery.min.js"></script>
+   
+   <script src="../js/bootstrap.bundle.min.js"></script>
+   <script src="../js/jquery-3.0.0.min.js"></script>
+   <!-- sidebar -->
+   <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="../js/custom.js"></script>
+   <script src="../js/toastr.js"></script>
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+<script src="../js/caixaexpresso.js"></script>
+<script src="../js/comum.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- mobile metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <!-- site metas -->
+  <title>LogMais - Tarefas</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- style css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Responsive-->
+  <link rel="stylesheet" href="../css/responsive.css">
+  <!-- fevicon -->
+  <link rel="stylesheet" href="../css/tarefas.css">
+  <link rel="icon" href="../images/fevicon.png" type="image/gif" />
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
+  <!-- Tweaks for older IEs-->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+    media="screen">
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+
+<body class="main-layout inner_page">
+  <!-- loader  -->
+  <div class="loader_bg">
+    <div class="loader"><img src="../images/loading.gif" alt="#" /></div>
+  </div>
+  <!-- end loader -->
+  <!-- header -->
+  <header class="full_bg">
+    <!-- header inner -->
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header_bottom">
+              <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                  <div class="full">
+                    <div class="center-desk">
+                      <div class="logo">
+                        <a href="index.html">Log<b style="color: cornflowerblue;">MAIS</b> </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                  <nav class="navigation navbar navbar-expand-md navbar-dark ">
+
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item ">
+                        <a class="nav-link " href="../index.html">HOME</a>
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link" href="caixaexpresso.html">CAIXA EXPRESSO</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="weblogin.html">WEBLOGIN</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="npeg.html">NPEG</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="sincronismo.html">SINCRONISMO</a>
+                      </li>
+                      <li class="dropdown">
+                        <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false">OUTROS</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="tarefas.html">Tarefas</a>
+                          <a class="dropdown-item" href="linksuteis.html">Links Úteis</a>
+                          <a class="dropdown-item" href="unidades.html">Unidades Login</a>
+                        </div>
+                      </li>
+
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end header inner -->
+    <!-- end header -->
+    <!-- banner -->
+  </header>
+
+   <div class="containerTodo">
+    <p>
+      <h3 for="new-task" style="font-size: 20px; margin-bottom: 20px;">Nova Tarefa</h3>
+
+      <textarea id="new-task" class="form-control" id="exampleFormControlTextarea1" rows="3" width="50%"></textarea><br>
+      <button type="button" class="btn btn-info" >Adicionar</button>
+    </p>
+    
+    <h3 style="font-size: 20px;">Afazeres</h3>
+    <ul id="incomplete-tasks" class="ulTodo">
+    </ul>
+    
+    <h3 style="font-size: 20px;">Tarefas Feitas</h3>
+    <ul id="completed-tasks" class="ulTodo">
+     </ul>
+  </div>
+
+ <!-- <script>
+      //Document is the DOM can be accessed in the console with document.window.
+// Tree is from the top, html, body, p etc.
+
+//Problem: User interaction does not provide the correct results.
+//Solution: Add interactivity so the user can manage daily tasks.
+//Break things down into smaller steps and take each step at a time.
+
+
+//Event handling, uder interaction is what starts the code execution.
+
+var taskInput=document.getElementById("new-task");//Add a new task.
+var addButton=document.getElementsByTagName("button")[0];//first button
+var incompleteTaskHolder=document.getElementById("incomplete-tasks");//ul of #incomplete-tasks
+var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
+
+
+//New task list item
+var createNewTaskElement=function(taskString){
+
+	var listItem=document.createElement("li");
+
+	//input (checkbox)
+	var checkBox=document.createElement("input");//checkbx
+	//label
+	var label=document.createElement("label");//label
+	//input (text)
+	var editInput=document.createElement("input");//text
+	//button.edit
+	var editButton=document.createElement("button");//edit button
+
+	//button.delete
+	var deleteButton=document.createElement("button");//delete button
+
+	label.innerText=taskString;
+
+	//Each elements, needs appending
+	checkBox.type="checkbox";
+	editInput.type="text";
+
+	editButton.innerText="Edit";//innerText encodes special characters, HTML does not.
+	editButton.className="edit";
+	deleteButton.innerText="Delete";
+	deleteButton.className="delete";
+
+
+
+	//and appending.
+	listItem.appendChild(checkBox);
+	listItem.appendChild(label);
+	listItem.appendChild(editInput);
+	listItem.appendChild(editButton);
+	listItem.appendChild(deleteButton);
+	return listItem;
+}
+
+
+
+var addTask=function(){
+	console.log("Add Task...");
+	//Create a new list item with the text from the #new-task:
+	var listItem=createNewTaskElement(taskInput.value);
+
+	//Append listItem to incompleteTaskHolder
+	incompleteTaskHolder.appendChild(listItem);
+	bindTaskEvents(listItem, taskCompleted);
+
+	taskInput.value="";
+
+}
+
+//Edit an existing task.
+
+var editTask=function(){
+   console.log("Edit Task...");
+   console.log("Change 'edit' to 'save'");
+
+
+   var listItem=this.parentNode;
+
+   var editInput=listItem.querySelector('input[type=text]');
+   var label=listItem.querySelector("label");
+   var containsClass=listItem.classList.contains("editMode");
+		//If class of the parent is .editmode
+		if(containsClass){
+
+		//switch to .editmode
+		//label becomes the inputs value.
+			label.innerText=editInput.value;
+		}else{
+			editInput.value=label.innerText;
+		}
+
+		//toggle .editmode on the parent.
+		listItem.classList.toggle("editMode");
+}
+
+
+
+
+//Delete task.
+var deleteTask=function(){
+		console.log("Delete Task...");
+
+		var listItem=this.parentNode;
+		var ul=listItem.parentNode;
+		//Remove the parent list item from the ul.
+		ul.removeChild(listItem);
+
+}
+
+
+//Mark task completed
+var taskCompleted=function(){
+		console.log("Complete Task...");
+	
+	//Append the task list item to the #completed-tasks
+	var listItem=this.parentNode;
+	completedTasksHolder.appendChild(listItem);
+				bindTaskEvents(listItem, taskIncomplete);
+
+}
+
+
+var taskIncomplete=function(){
+		console.log("Incomplete Task...");
+//Mark task as incomplete.
+	//When the checkbox is unchecked
+		//Append the task list item to the #incomplete-tasks.
+		var listItem=this.parentNode;
+	incompleteTaskHolder.appendChild(listItem);
+			bindTaskEvents(listItem,taskCompleted);
+}
+
+
+
+var ajaxRequest=function(){
+	console.log("AJAX Request");
+}
+
+//The glue to hold it all together.
+
+
+//Set the click handler to the addTask function.
+addButton.onclick=addTask;
+addButton.addEventListener("click",addTask);
+addButton.addEventListener("click",ajaxRequest);
+
+
+var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
+	console.log("bind list item events");
+//select ListItems children
+	var checkBox=taskListItem.querySelector("input[type=checkbox]");
+	var editButton=taskListItem.querySelector("button.edit");
+	var deleteButton=taskListItem.querySelector("button.delete");
+
+
+			//Bind editTask to edit button.
+            editButton.onclick=edit
+            
+            Task;
+			//Bind deleteTask to delete button.
+			deleteButton.onclick=deleteTask;
+			//Bind taskCompleted to checkBoxEventHandler.
+			checkBox.onchange=checkBoxEventHandler;
+}
+
+//cycle over incompleteTaskHolder ul list items
+	//for each list item
+	for (var i=0; i<incompleteTaskHolder.children.length;i++){
+
+		//bind events to list items chldren(tasksCompleted)
+		bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
+	}
+
+
+
+
+//cycle over completedTasksHolder ul list items
+	for (var i=0; i<completedTasksHolder.children.length;i++){
+	//bind events to list items chldren(tasksIncompleted)
+		bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
+	}
+
+
+
+
+// Issues with usabiliy don't get seen until they are in front of a human tester.
+
+//prevent creation of empty tasks.
+
+//Shange edit to save when you are in edit mode.
+
+  </script> -->
+
+  <script src="../js/tarefas.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+
+    <script src="../js/jquery.min.js"></script>
+   
+   <script src="../js/bootstrap.bundle.min.js"></script>
+   <script src="../js/jquery-3.0.0.min.js"></script>
+   <!-- sidebar -->
+   <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="../js/custom.js"></script>
+   <script src="../js/toastr.js"></script>
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+
+</body>
+
+</html>

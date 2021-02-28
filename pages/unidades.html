@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>LogMais - Unidades</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="../css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" href="../css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="../css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="../images/fevicon.png" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+     media="screen">
+   <!--[if lt IE 9]>
+       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <style>
+          .navbar {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: block;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    margin-left: 0;
+}
+
+.col-4{
+    position: relative;
+    width: 100%;
+}
+
+.flex-column {
+    -webkit-box-orient: vertical!important;
+    -webkit-box-direction: normal!important;
+    -ms-flex-direction: column!important;
+    flex-direction: column!important;
+}
+
+
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+    .headertab {
+   background-color:   #2b686e;
+   color: white;
+   font-size: 1.5em;
+   padding: 1rem;
+   text-align: center;
+   text-transform: uppercase;
+   height: 50px;
+}
+
+.table-users {
+   border: 1px solid #2b686e;
+   border-radius: 10px;
+   box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+   max-width: calc(100% - 2em);
+   margin: 1em auto;
+   overflow: hidden;
+  
+}
+
+#tabelaUnidades >tbody>tr:nth-child(odd)>td, 
+#tabelaUnidades>tbody>tr:nth-child(odd)>th {
+   background-color: #daeff1;
+} 
+    
+table {
+   width: 100%;
+}
+   
+    th { 
+    background-color: #daeff1;
+    padding: 10px; 
+     color:  #398B93 ;
+     text-align: center;
+   }
+   
+   td {
+      text-align: center;
+      vertical-align: center;
+   }
+      </style>
+</head>
+<!-- body -->
+
+<body class="main-layout">
+   <!-- loader  -->
+   <div class="loader_bg">
+      <div class="loader"><img src="../images/loading.gif" alt="#" /></div>
+   </div>
+   <!-- end loader -->
+   <!-- header -->
+   <header class="full_bg">
+     <!-- header inner -->
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header_bottom">
+              <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                  <div class="full">
+                    <div class="center-desk">
+                      <div class="logo">
+                        <a href="index.html">Log<b style="color: cornflowerblue;">MAIS</b> </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                  <nav class="navigation navbar navbar-expand-md navbar-dark ">
+
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item ">
+                        <a class="nav-link " href="../index.html">HOME</a>
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link" href="caixaexpresso.html">CAIXA EXPRESSO</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="weblogin.html">WEBLOGIN</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="npeg.html">NPEG</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="sincronismo.html">SINCRONISMO</a>
+                      </li>
+                      <li class="dropdown">
+                        <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false">OUTROS</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="tarefas.html">Tarefas</a>
+                          <a class="dropdown-item" href="linksuteis.html">Links Úteis</a>
+                          <a class="dropdown-item" href="unidades.html">Unidades Login</a>
+                        </div>
+                      </li>
+
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end header inner -->
+    <!-- end header -->
+    <!-- banner -->
+   </header>
+  <div id="corpoUnidades">
+      <div >
+        <nav id="navbar-example3" class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">Unidades</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link cidadeUnidade" href="#collapseExample"  data-toggle="collapse"  role="button" aria-expanded="false" 
+              aria-controls="collapseExample">SALVADOR</a>
+              
+              <div class="collapse" id="collapseExample" >
+               <nav class="nav nav-pills flex-column" >
+                  <ul class="unidadesUl" >
+                     <li><a class="nav-link ml-3 my-1" href="#ssacd" onclick="acendeUnidade(event)">Salvador CD</a></li>
+                     <li><a class="nav-link ml-3 my-1" href="#esp" onclick="acendeUnidade(event)">Espatódeas</a></li>
+                     <li><a class="nav-link ml-3 my-1" href="#ssashop" onclick="acendeUnidade(event)">Salvador Shop.</a></li>
+                    <li> <a class="nav-link ml-3 my-1" href="#iguat" onclick="acendeUnidade(event)">Iguatemi</a></li>
+                     <li><a class="nav-link ml-3 my-1" href="#norte" onclick="acendeUnidade(event)">Salvador Norte</a></li>
+                     <li><a class="nav-link ml-3 my-1" href="#siguat" onclick="acendeUnidade(event)">Smart Iguatemi</a></li>
+                     <li><a class="nav-link ml-3 my-1" href="#bela" onclick="acendeUnidade(event)">Bela Vista</a></li>
+                     <li><a class="nav-link ml-3 my-1" href="#para" onclick="acendeUnidade(event)">Paralela</a> </li>
+                  </ul> 
+               </nav>
+            </div>
+
+            <a class="nav-link" href="#collapseExample3"  data-toggle="collapse"  role="button" aria-expanded="false" 
+            aria-controls="collapseExample3" >INTERIOR - BA</a>
+            <div class="collapse" id="collapseExample3">
+             <nav class="nav nav-pills flex-column">
+               <ul class="unidadesUl" >
+               <li><a class="nav-link ml-3 my-1" href="#lauro" onclick="acendeUnidade(event)">Lauro de Freitas</a></li>
+                <li><a class="nav-link ml-3 my-1" href="#jequi" onclick="acendeUnidade(event)">Jequitiba</a></li>
+                <li><a class="nav-link ml-3 my-1" href="#ilh" onclick="acendeUnidade(event)">Ilhéus</a></li>
+                </ul>
+               </nav>
+            </div>
+              <a class="nav-link" href="#collapseExample2"  data-toggle="collapse"  role="button" aria-expanded="false" 
+              aria-controls="collapseExample2" >SERGIPE</a>
+              <div class="collapse" id="collapseExample2">
+               <nav class="nav nav-pills flex-column">
+                  <ul class="unidadesUl" >
+                 <li> <a class="nav-link ml-3 my-1" href="#aju" onclick="acendeUnidade(event)">Aracaju</a></li>
+                 <li> <a class="nav-link ml-3 my-1" href="#jar" onclick="acendeUnidade(event)">Jardins</a></li>
+               </ul>
+               </nav>
+               </div>
+
+             
+              
+           
+            </nav>
+          </nav>
+      </div>
+  </div>
+
+  <div id="corpoTabela">
+   <div class="coltabela" >
+      <div  data-target="#navbar-example3"  class="scrollspy-example-2">
+       <div class="table-users">
+         <div class="headertab">UNIDADES</div>   
+         <table cellspacing="0" id="tabelaUnidades">
+            <tr >
+               <th width="5%">Cod.</th>
+               <th width="20%">UNIDADE</th>
+               <th width="20%">CNPJ</th>
+               <th width="15%">IP</th>
+               <th width="40%">Endereço</th>
+               
+            </tr>
+            <tr>
+               <td>1</td>
+               <td id="ssacd" class="unidade">SALVADOR CD</td>
+               <td>00.066.716/0005-15</td>
+               <td>-</td>
+               <td style="font-size: smaller;">Rua da Indonésia S/N - Espaço Empre Josué Alves, Galpão 7, Granjas Rurais, CEP: 41.230-020</td>
+            </tr>
+            <tr>
+               <td>3</td>
+               <td id="ilh" class="unidade">ILHEUS</td>
+               <td>00.066.716/0003-53</td>
+               <td>-</td>
+               <td style="font-size: smaller;">Rod Ilhéus/Uruçuca, KM 04, GP 3A - Iguapé/Ilhéus, CEP: 45.658-370</td>
+            </tr>
+            <tr>
+               <td>6</td>
+               <td id="esp" class="unidade"><a 
+                  href="http://172.16.7.110:8080/Web-SincronismoOffLine/ServletServicoSinc?acao=listEntidades" target="_blank">ESPATÓDEAS</a> </td>
+               <td>00.066.716/0001-91</td>
+               <td>172.16.<b style="color:red">7</b>.110</red></td>
+               <td style="font-size: smaller;">Alameda das Cajazeiras, nº 560 - Caminho das Árvores/Pituba, CEP: 41.820-470</td>
+            </tr>
+            <tr>
+               <td>7</td>
+               <td id="aju" class="unidade">
+                 <a href="http://172.16.19.110:8080/Web-SincronismoOffLine/ServletServicoSinc?acao=listEntidades" target="_blank">ARACAJU</a> 
+               </td>
+               <td>00.066.716/0002-72</td>
+               <td>172.16.<b style="color:red">19</b>.110</red></td>
+               <td style="font-size: smaller;">Av. Gonçalo Rolemberg Leite, nº 2178 - Pereira Lobo - Aracaju/SE, CEP: 49.050.370</td>
+            </tr>
+
+            <tr>
+               <td>11</td>
+               <td id="lauro" class="unidade">
+                 <a href="http://172.16.23.110:8080/Web-SincronismoOffLine/ServletServicoSinc?acao=listEntidades" target="_blank">LAURO DE FREITAS</a> 
+               </td>
+               <td>00.066.716/0008-68</td>
+               <td>172.16.<b style="color:red">23</b>.110</red></td>
+               <td style="font-size: smaller;">Av. Santos Dumont S/N, Lot JD Aeroporto, nº 4699, Estrada do Coco - Centro/Lauro de Freitas, CEP: 42.700-000</td>
+            </tr>
+            <tr>
+               <td>18</td>
+               <td id="ssashop" class="unidade">
+                  <a href="http://172.16.27.110:8080/Web-SincronismoOffLine/ServletServicoSinc?acao=listEntidades" target="_blank">SALVADOR SHOP.</a> 
+               </td>
+               <td>00.066.716/0009-49</td>
+               <td>172.16.<b style="color:red">27</b>.110</red></td>
+               <td style="font-size: smaller;">Av. Tancredo Neves, SSA Shopping, setor 136, Expansão L2 - Caminho das Árvores/Pituba, CEP: 41.820.020</td>
+            </tr>
+            <tr>
+               <td>21</td>
+               <td id="iguat" class="unidade">
+               <a href="http://172.16.31.110:8080/Web-SincronismoOffLine/ServletServicoSinc?acao=listEntidades" target="_blank">IGUATEMI</a> 
+               </td>
+               <td>00.066.716/0010-82</td>
+               <td>172.16.<b style="color:red">31</b>.110</red></td>
+               <td style="font-size: smaller;">Av. Tancredo Neves, 148, Shopping Iguatemi - Alameda Newton Rique - 2 Piso - Caminho das Árvores/Pituba, CEP: 41.820.908</td>
+            </tr>
+            <tr>
+               <td>23</td>
+               <td id="norte" class="unidade">
+                 <a href="http://172.16.39.110:8080/Web-SincronismoOffLine/ServletServicoSinc?acao=listEntidades" target="_blank">SALVADOR NORTE</a> 
+               </td>
+               <td>00.066.716/0011-63</td>
+               <td>172.16.<b style="color:red">39</b>.110</red></td>
+               <td style="font-size: smaller;">ROD BA-526, 305 SSA Norte Shopping - São Cristovão, CEP: 41.510-000</td>
+            </tr>
+            <tr>
+               <td>35</td>
+               <td id="siguat" class="unidade">
+                 <a href="http://172.16.31.110:8080/Web-SincronismoOffLine/ServletServicoSinc?acao=listEntidades" target="_blank">SMART IGUATEMI</a> 
+               </td>
+               <td>00.066.716/0010-82</td>
+               <td>172.16.<b style="color:red">31</b>.110</red></td>
+               <td style="font-size: smaller;">Av. Tancredo Neves, 148, Shopping Iguatemi - Alameda Newton Rique - 2 Piso - Caminho das Árvores/Pituba, CEP: 41.820.908</td>
+            </tr>
+            <tr>
+               <td>36</td>
+               <td id="jequi" class="unidade">
+                 <a href="http://172.16.45.110:8080/Web-SincronismoOffLine/ServletServicoSinc?acao=listEntidades" target="_blank">JEQUITIBÁ</a> 
+               </td>
+               <td>00.066.716/0014-06</td>
+               <td>172.16.<b style="color:red">45</b>.110</red></td>
+               <td style="font-size: smaller;">Av. Aziz Maron S/N, Loja ÇAH26B Piso Terreo Goes Calmon/Itabuna, CEP: 45.605-412</td>
+            </tr>
+            <tr>
+               <td>38</td>
+               <td id="jar" class="unidade">
+                 <a href="http://172.16.46.110:8080/Web-SincronismoOffLine/ServletServicoSinc?acao=listEntidades" target="_blank">JARDINS</a> 
+               </td>
+               <td>00.066.716/0015-97</td>
+               <td>172.16.<b style="color:red">46</b>.110</red></td>
+               <td style="font-size: smaller;">Av. Ministro Geraldo Barreto Sobral 215, Espaço comercial E08 1 PI Jardins - Aracaju/SE, CEP: 49.026-010</td>
+            </tr>
+            <tr>
+               <td>46</td>
+               <td id="bela" class="unidade">
+                <a href="http://172.16.50.110:8080/Web-SincronismoOffLine/ServletServicoSinc?acao=listEntidades" target="_blank">BELA VISTA</a>  
+               </td>
+               <td>00.066.716/0018-30</td>
+               <td>172.16.<b style="color:red">50</b>.110</red></td>
+               <td style="font-size: smaller;">Ala Euvaldo Luz 92, Shopping Bela Vista Lo Horto Bela Vista/Salvador, CEP: 41098-020</td>
+            </tr>
+            <tr>
+               <td>54</td>
+               <td id="para" class="unidade">
+                 <a href="http://172.16.52.110:8080/Web-SincronismoOffLine/ServletServicoSinc?acao=listEntidades" target="_blank">PARALELA</a> 
+               </td>
+               <td>00.066.716/0020-54</td>
+               <td>172.16.<b style="color:red">52</b>.110</red></td>
+               <td style="font-size: smaller;">Av. Luís Viana Filho, Alphaville, nº 8544, Shopping Paralela, D113/115, CEP: 41730-101</td>
+            </tr>
+         </table>
+      </div>
+
+  </div>
+ </div>
+ </div>
+   <footer style="margin-top: 65%;">
+      <div class="footer-copyright">
+         <div class="container">
+         <div class="row">
+         <div class="col-md-12 text-center">
+         <p>LOGMAIS Gerenciamento de Registros dos sistemas Login © 2020. All rights reserved.</p>
+         </div>
+         </div>
+         </div>
+         </div>
+   </footer>
+   <!-- end footer -->
+   <!-- end footer -->
+   <!-- Javascript files-->
+   <script src="../js/jquery.min.js"></script>
+ 
+   <script src="../js/bootstrap.bundle.min.js"></script>
+   <script src="../js/jquery-3.0.0.min.js"></script>
+   <!-- sidebar -->
+   <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="../js/custom.js"></script>
+   <script src="../js/toastr.js"></script>
+
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+
+<script>
+  //FUNÇÃO DA PAGINA UNIDADES
+//COLORIR A UNIDADE SELECIONADA
+
+function acendeUnidade(event){
+    var target = event.target || event.srcElement;
+    var targetupper = target.innerHTML.toUpperCase();
+    
+    var unidade = document.querySelectorAll(".unidade");
+        for(var i = 0; i < unidade.length; i++){
+          console.log(unidade[i].innerHTML);
+          if(unidade[i].innerHTML === targetupper){
+           $(unidade[i]).css({"background-color": "yellow"})
+           break;
+            }
+          }
+      } 
+</script>
+
+</body>
+
+</html>

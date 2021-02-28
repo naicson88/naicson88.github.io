@@ -1,0 +1,135 @@
+.containerTodo {
+    display: block;
+    width: 60%;
+    margin: 60px auto 0;
+        }
+    .ulTodo {
+        margin: 0;
+        padding: 0;
+    }
+
+ 
+    .ulTodo, li ,h3{
+        clear:both;
+         list-style:none;
+    }
+
+    input, button {
+    outline: none;
+    margin-right: 2px;
+    
+    }
+
+.form-control{
+    width: 70% !important;
+}
+
+h3,
+label[for='new-task'] {
+color: #333;
+font-weight: 700;
+font-size: 15px;
+border-bottom: 2px solid #333;
+padding: 30px 0 10px;
+margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="text"] {
+margin: 0;
+font-size: 15px;
+padding: 10px;
+border: 1px solid #ddd;
+background: #fff;
+border-radius: 6px;
+font-family: Lato, sans-serif;
+color: #888;
+margin-left: 30px;
+}
+
+/* New Task */
+label[for='new-task'] {
+display: block;
+margin: 0 0 20px;
+width: 100%;
+}
+
+input#new-task {
+float: left;
+width: 318px;
+}
+
+.ulTodo li {
+overflow: hidden;
+padding: 20px 0;
+border-bottom: 1px solid #eee;
+width: 100%;
+}
+
+.ulTodo li > input[type="checkbox"] {
+margin: 0 10px;
+top: 15px;
+
+}
+.ulTodo li > label {
+font-size: 15px;
+line-height: 40px;
+/*width: 30%;*/
+padding: 0 0 0 11px;
+}
+
+.ulTodo li > .delete {
+margin-right: 3px;
+}
+
+/* Completed */
+#completed-tasks label {
+text-decoration: line-through;
+color: #888;
+}
+
+
+
+/* Edit Task */
+.ulTodo li input[type=text] {
+display:none;
+}
+
+ul li.editMode input[type=text] {
+display:block;
+width: 70%;
+}
+
+ul li.editMode label {
+display:none;
+}
+
+ul li.editMode input[type=checkbox]{
+    display: none;
+}
+
+.edit, .delete{
+float: right;
+}
+
+.inputTodo{
+width: 65%;
+height: auto;
+}
+
+.inputEdit{
+width: 110%;
+height: auto;
+}
+
+.pData{
+    font-size: x-small;
+    color: red;
+    font-style: italic;
+}
+
+
+

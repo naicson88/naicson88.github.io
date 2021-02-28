@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- mobile metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <!-- site metas -->
+  <title>LogMais - Links Uteis</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+  <!-- style css -->
+  <link rel="stylesheet" href="../css/style.css"/>
+  <!-- Responsive-->
+  <link rel="stylesheet" href="../css/responsive.css"/>
+  <!-- fevicon -->
+  <link rel="icon" href="../images/fevicon.png" type="image/gif" />
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css"/>
+  <!-- Tweaks for older IEs-->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen"/>
+       <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <style>
+        .td_copiar {
+           text-align: center;
+        }
+        .copiar{
+           transform: scale(1.4);
+        }
+        .copiar:hover{
+           
+        color: #82c91e;
+        transform: scale(1.5);
+        transition: all 0.3s;
+        cursor:pointer;
+        }
+
+        .hover-lime:focus {
+        color: #82c91e;
+        border: 1px solid white;
+     }
+
+     </style>
+</head>
+<!-- body -->
+
+<body class="main-layout inner_page">
+  <!-- loader  -->
+  <div class="loader_bg">
+    <div class="loader"><img src="../images/loading.gif" alt="#" /></div>
+  </div>
+  <!-- end loader -->
+  <!-- header -->
+  <header class="full_bg">
+    <!-- header inner -->
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header_bottom">
+              <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                  <div class="full">
+                    <div class="center-desk">
+                      <div class="logo">
+                        <a href="index.html">Log<b style="color: cornflowerblue;">MAIS</b> </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                  <nav class="navigation navbar navbar-expand-md navbar-dark ">
+
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item ">
+                        <a class="nav-link " href="../index.html">HOME</a>
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link" href="caixaexpresso.html">CAIXA EXPRESSO</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="weblogin.html">WEBLOGIN</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="npeg.html">NPEG</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="sincronismo.html">SINCRONISMO</a>
+                      </li>
+                      <li class="dropdown">
+                        <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false">OUTROS</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="tarefas.html">Tarefas</a>
+                          <a class="dropdown-item" href="linksuteis.html">Links Úteis</a>
+                          <a class="dropdown-item" href="unidades.html">Unidades Login</a>
+                        </div>
+                      </li>
+
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end header inner -->
+    <!-- end header -->
+    <!-- banner -->
+  </header>
+   <div id="corpoLinks" style="border: solid thin silver;
+    width: 90%; 
+    margin-left: 70px; 
+    margin-top: 40px; 
+    border-radius: 10px;
+  "
+    >
+      <div id="divTopboxListar">Links <b >Úteis</b> </div>
+
+     <table class="table table-striped" 
+     style="width: 80%; 
+     margin-left: 10%; 
+     margin-top: -15px;
+     margin-bottom: 5%;">
+         <thead>
+           <tr style="background-color: #6c7ae0; color: white;">
+        
+             <th scope="col" width="20%">Destino</th>
+             <th scope="col">Link</th>
+             <th scope="col">Copiar</th>
+           </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td> <b>WEBLOGIN</b>  </td>
+               <td class="link"> <a href="http://172.16.7.138:8080/weblogin/jsp/estrutura/logon.jsp?Acao=Sair" target="_blank">
+                http://172.16.7.<b>138</b>:8080/weblogin/jsp/estrutura/logon.jsp?Acao=Sair </a> </td>
+              <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3" onclick="copiar()"></i></td> 
+             </tr>
+           <tr>
+             <td> <b>WEBSINCRONISMO</b>  </td>
+             <td class="link">
+              <a href="http://172.16.31.110:8080/Web-SincronismoOffLine/ServletServicoSinc?acao=listEntidades" target="_blank">
+                http://172.16.31.110:8080/Web-SincronismoOffLine/ServletServicoSinc?acao=listEntidades </a> 
+              </td>
+            <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3" onclick="copiar()"></i></td> 
+           </tr>
+           <tr>
+            <td> <b>GLPI CHAMADOS</b>  </td>
+            <td> <a href="http://172.16.7.196/glpi/front/ticket.form.php?id=21665" target="_blank">
+               http://172.16.7.196/glpi/front/ticket.form.php?id=21665 </a></td>
+            <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3"></i></td> 
+          </tr>
+          <tr>
+            <td><b>MONITOR SERVIDORES</b>  </td>
+            <td> <a href="http://172.16.7.190:9090/JMonitorBanco/pages/index.jsf" target="_blank">
+               http://172.16.7.190:9090/JMonitorBanco/pages/index.jsf </a></td>
+            <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3"></i></td> 
+          </tr>
+          <tr>
+            <td><b>SERVLETS NPEG</b>  </td>
+            <td> <a href="http://172.16.7.137:8080/weblogin/url.html#" target="_blank">
+               http://172.16.7.137:8080/weblogin/url.html# </a></td>
+            <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3"></i></td> 
+          </tr>
+          <tr>
+            <td> <b>JPROJECT</b>   </td>
+            <td> <a href="http://172.16.7.190:9090/jproject/principal.jsf" target="_blank">
+               http://172.16.7.190:9090/jproject/principal.jsf </a></td>
+            <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3"></i></td> 
+         </tr>
+         <tr>
+            <td> <b>SISTEMA VTE</b>   </td>
+            <td> <a href="http://172.16.7.190:8090/login" target="_blank"> http://172.16.7.190:8090/login </a></td>
+            <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3"></i></td> 
+         </tr>
+         <tr>
+            <td> <b>MAKER</b>  </td>
+            <td> <a href=" http://172.16.7.190:9090/pfi/logon.jsp?sys=PFI&msgKey=" target="_blank">
+               http://172.16.7.190:9090/pfi/logon.jsp?sys=PFI&msgKey= </a></td>
+            <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3"></i></td> 
+         </tr>
+         <tr>
+            <td> <b>LINK CONSULTA NPEG (F6)</b>  </td>
+            <td> <a href="http://172.16.7.190:9090/npegconnect/consulta" target="_blank"> http://172.16.7.190:9090/npegconnect/consulta</a></td>
+            <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3"></i></td> 
+         </tr>
+         <tr>
+            <td> <b>SFC (ILHÉUS)</b>  </td>
+            <td> <a href=" http://172.16.15.151:8080/Login-Sfc-Web/pages/login.jsf" target="_blank">
+              http://172.16.15.151:8080/Login-Sfc-Web/pages/login.jsf </a> </td>
+            <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3"></i></td> 
+         </tr>
+         <tr>
+            <td> <b>CHAMADOS PARA SETOR DE MANUTENÇÃO</b>  </td>
+            <td> <a href="http://172.16.7.190:9090/jreparosgerais/principal.jsf" target="_blank">
+              http://172.16.7.190:9090/jreparosgerais/principal.jsf </a> </td>
+            <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3"></i></td> 
+         </tr>
+         
+         <tr>
+          <td> <b>WEBMAIL LOGIN</b>  </td>
+          <td> <a href="https://webmail-seguro.com.br/login.com.br/" target="_blank">https://webmail-seguro.com.br/login.com.br/</a> </td>
+          <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3"></i></td>    
+        </tr>
+
+        <tr>
+          <td> <b>PONTO SECULLUM</b>  </td>
+          <td> <a href="https://pontosecullum4-02.secullum.com.br/ponto4web/1752730000#login" target="_blank">
+             https://pontosecullum4-02.secullum.com.br/ponto4web/1752730000#login </a></td>
+          <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3"></i></td>    
+        </tr>
+
+        <tr>
+          <td> <b>CONTRACHEQUE</b>  </td>
+          <td> <a href="http://172.16.6.209:8080/dts/portal-hcm/PortalMeuRH/#/payments" target="_blank">
+             http://172.16.6.209:8080/dts/portal-hcm/PortalMeuRH/#/payments </a></td>
+          <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3"></i></td>    
+        </tr>
+        <tr>
+          <td> <b>SERVIDOR BALANCE ACESSO</b>  </td>
+          <td> <a href="http://172.16.7.149:9990/console/App.html#server-instances" target="_blank"> 
+            http://172.16.7.149:9990/console/App.html#server-instances </a></td>
+          <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3"></i></td>    
+        </tr>
+        <tr>
+          <td> <b>SERVIDORES BALANCE (Slave 1)</b>  </td>
+          <td> <a href="http://172.16.7.145:8880/WS-Sincronismo/services/SincLocalMatriz?wsdl" target="_blank">
+            http://172.16.7.145:8880/WS-Sincronismo/services/SincLocalMatriz?wsdl </a></td>
+          <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3"></i></td>    
+        </tr>
+
+        <tr>
+          <td> <b>SERVIDORES BALANCE (Slave 2)</b>  </td>
+          <td> <a href="http://172.16.7.151:8980/WS-Sincronismo/services/SincLocalMatriz?wsdl" target="_blank">
+            http://172.16.7.151:8980/WS-Sincronismo/services/SincLocalMatriz?wsdl </a></td>
+          <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3"></i></td>    
+        </tr>
+
+        <tr>
+          <td> <b>AVALIAÇÃO DE DESEMPENHO</b>  </td>
+          <td> <a href="http://172.16.7.190:9090/AvaliacaoDesempenho/pages/login.jsf" target="_blank">
+             http://172.16.7.190:9090/AvaliacaoDesempenho/pages/login.jsf </a></td>
+          <td class="td_copiar"><i class="fa fa-copy fa-lg copiar" aria-hidden="true" size="3"></i></td>    
+        </tr>
+     
+         
+         </tbody>
+       </table>
+       
+   </div>
+
+   <footer style="margin-top: 4%;">
+      <div class="footer-copyright">
+         <div class="container">
+         <div class="row">
+         <div class="col-md-12 text-center">
+         <p>LOGMAIS - Gerenciamento de Registros Login © 2020. All rights reserved.</p>
+         </div>
+         </div>
+         </div>
+         </div>
+   </footer>
+
+   <script src="../js/jquery.min.js"></script>
+ 
+   <script src="../js/bootstrap.bundle.min.js"></script>
+   <script src="../js/jquery-3.0.0.min.js"></script>
+   <!-- sidebar -->
+   <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="../js/custom.js"></script>
+   <script src="../js/toastr.js"></script>
+
+
+
+<script>
+
+   //Função para copiar quando clicar no icone na tela de Links Uteis
+   //Função colocada aqui pois no principal.js não estava chamando a função click
+   $('.copiar').click(function(){
+      //valor = $(this).closest("tr").find('.link').html();
+      valor =  $(this).closest("td").prev('td')[0];
+      var select = window.getSelection();
+      var range = document.createRange();
+
+      range.selectNodeContents(valor);
+      select.removeAllRanges();
+      select.addRange(range);
+
+      try{
+        var success = document.execCommand('copy');
+        if(success){  
+          toastr.info('Copiado com sucesso');
+          
+        } else {
+          toastr.warning('Não foi possivel copiar')
+        }
+      } catch(err){
+        $('.copiar').html(err)
+      }
+      
+    })
+
+</script>
+
+<script src="../js/principal.js"></script>
+
+</body>
+
+</html>
